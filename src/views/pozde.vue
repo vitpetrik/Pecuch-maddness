@@ -125,9 +125,8 @@ export default {
     chart_data() {
       let self = this;
       let data = [];
-      let pozde = this.pozde
-      pozde.reverse().forEach((log, index) => {
-        data.push({ y: self.rozdil(log).rozdil, x: index });
+      this.pozde.forEach((log, index) => {
+        data.push({ y: self.rozdil(log).rozdil, x: this.pozde.length - index });
       });
       let array = [
         {
